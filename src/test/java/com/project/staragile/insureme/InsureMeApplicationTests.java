@@ -1,33 +1,36 @@
 package com.project.staragile.insureme;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class InsureMeApplicationTests {
-
-//	@Test
-//	void contextLoads() {
-//	}
-//	
-//	@Test
-//	void testCreatePolicy() {
-//		Policy policy = new Policy(1, "Shubham", "Individual" , 10000, "10-Sep-2021", "10-Sep-2022");
-//		PolicyService pService = new PolicyService();
-//		//Policy outputPolicy = pService.CreatePolicy();
-//		assertEquals(policy.getPolicyId(), pService.generateDummyPolicy().getPolicyId());
-//		
-//	}
-//	
-//	@Test
-//	void testSearchPolicy() {
-//		PolicyService pService = new PolicyService();
-//		assertEquals(null,pService.searchPolicy());
-//	}
 	@Test
-	void simpleTest() {
-		assertEquals(1, 1);
+	void testCreationMessage() throws InterruptedException {
+		System.out.println("Contact Page");
+//		WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		ChromeOptions chromeOptions = new ChromeOptions();
+		WebDriver webdriver = new ChromeDriver();
+
+		// Navigate to contact page
+//	String contactUrl2 = "http://localhost:8083/contact.html";
+//	String contactUrl = serviceBaseUrl + "/contact.html";
+//	webdriver.get(contactUrl2);
+
+		// Populate the contact page to determine if we are able to send information
+//	webdriver.findElement(By.id("inputName")).sendKeys("Justin");
+//	webdriver.findElement(By.id("inputNumber")).sendKeys("123456786");
+//	webdriver.findElement(By.id("inputMail")).sendKeys("face@gmail.com");
+//	webdriver.findElement(By.id("inputMessage")).sendKeys("Hello. I'm not a bot.");
+//	webdriver.findElement(By.id("my-button")).click();
+
+		// Check if "Message Sent"
+//	String responseText = webdriver.findElement(By.id("response")).getText();
+//	TimeUnit.SECONDS.sleep(4);
+//	Assert.assertEquals("Message Sent", responseText);
 	}
 }
