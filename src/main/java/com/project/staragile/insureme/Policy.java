@@ -1,6 +1,5 @@
 package com.project.staragile.insureme;
 
-import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,26 +7,29 @@ import javax.persistence.Id;
 
 @Entity
 public class Policy {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int policyId;
-	
+
 	private String policyHolderName;
-	
+
 	private String policyType;
-	
+
 	private double policyPrice;
-	
+
 	private String policyStartDate;
-	
+
 	private String policyEndDate;
-	
-	
 
 	public Policy() {
 		super();
-		// TODO Auto-generated constructor stub
+		this.policyId = 0;
+		this.policyHolderName = "N/A";
+		this.policyType = "N/A";
+		this.policyPrice = 0.0;
+		this.policyStartDate = "";
+		this.policyEndDate = "";
 	}
 
 	public Policy(int policyId, String policyHolderName, String policyType, double policyPrice, String policyStartDate,
@@ -88,7 +90,5 @@ public class Policy {
 	public void setPolicyEndDate(String policyEndDate) {
 		this.policyEndDate = policyEndDate;
 	}
-	
-	
 
 }
